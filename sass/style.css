@@ -230,6 +230,10 @@ nav ul .a li .ellipse {
   font-weight: 500;
 }
 
+.heart {
+  fill: #ff0000;
+}
+
 .starter {
   margin-top: 38px;
   display: flex;

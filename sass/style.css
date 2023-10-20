@@ -20,6 +20,11 @@ a {
   position: absolute;
   left: 17px;
   top: 30px;
+  transition: transform 800ms;
+}
+
+.fa-arrow-left:hover {
+  transform: scale(1.1);
 }
 
 .jsp {
@@ -45,6 +50,34 @@ header {
   width: 197px;
   height: 36px;
   margin: 14px auto;
+}
+
+button {
+  color: var(--Grey, #353535);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
+
+button:hover {
+  display: none;
+}
+
+.suitable {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.euros {
+  color: #353535;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15.043px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .location {
@@ -134,14 +167,15 @@ h1 {
   width: 186px;
 }
 
-.btn:hover {
+.btn:hover, .btn1:hover {
   background: var(--Button-Gradient, linear-gradient(193deg, #ff8bde -11.44%, #965cdc 123.93%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
-.btn:hover {
-  background: var(--Button-Gradient, linear-gradient(193deg, #ff8bde -11.44%, #965cdc 123.93%));
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+.tap {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
 }
 
 li::marker {
@@ -196,22 +230,6 @@ nav ul .a li .ellipse {
   font-weight: 500;
 }
 
-.heart-full {
-  position: absolute;
-  transition-property: all;
-  transition-duration: 1s;
-  inset: 8.5px 0px 0px 0px;
-  opacity: 0;
-}
-
-.heart-full:hover {
-  opacity: 1;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: var(--Button-Gradient, linear-gradient(193deg, #ff8bde -11.44%, #965cdc 123.93%));
-}
-
 .starter {
   margin-top: 38px;
   display: flex;
@@ -227,11 +245,14 @@ nav ul .a li .ellipse {
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
+  border-bottom-color: #99E2D0;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  width: 40px;
 }
 
 .grey {
   background-color: var(--Background, #F6F6F6);
-  padding-bottom: 40px;
 }
 
 .card-title {
@@ -248,6 +269,9 @@ nav ul .a li .ellipse {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .weight {
@@ -288,7 +312,7 @@ nav ul .a li .ellipse {
 .card-text {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px 12px 13px;
+  margin: 15px;
   align-items: flex-start;
   gap: 2px;
   width: 100%;
@@ -297,7 +321,7 @@ nav ul .a li .ellipse {
 .card-rating {
   position: absolute;
   right: 25px;
-  bottom: 25px;
+  bottom: 19px;
 }
 
 .img1 {
@@ -318,7 +342,7 @@ nav ul .a li .ellipse {
   background-color: #F6F6F6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 32px 17px;
+  padding: 32px 17px 0px 17px;
 }
 
 .shriklando {
@@ -330,6 +354,7 @@ nav ul .a li .ellipse {
   line-height: normal;
   align-items: center;
   display: flex;
+  justify-content: space-between;
   gap: 25px;
 }
 

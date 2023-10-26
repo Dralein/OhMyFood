@@ -205,9 +205,12 @@ nav
            font-weight: 500
 
 .heart
- fill: #ff0000
+ fill-opacity: 0
+ transition: fill-opacity 1.5s
 
 .heart:hover
+  fill-opacity: 1
+  cursor: pointer
 
 
 .starter
@@ -321,9 +324,31 @@ nav
   line-height: normal
   align-items: center
   display: flex
-  justify-content: space-between
   gap: 25px
 
+.group 
+  opacity: 0
+  animation: appear 1.5s ease-in-out forwards
+
+.group1
+  opacity: 0
+  animation: appear 3s ease-in-out forwards
+
+.group2
+  opacity: 0
+  animation: appear 4.5s ease-in-out forwards
+
+
+@keyframes appear 
+  0% 
+    opacity: 0
+    transform: translateY(20px)
+  
+  100% 
+    opacity: 1
+    transform: translateY(0)
+
+  
 
 .foot
   display: flex

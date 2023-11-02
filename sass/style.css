@@ -12,8 +12,13 @@ a {
 
 .card {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15.043px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: transform 1000ms;
+}
+
+.card:hover {
+  transform: scale(1.025);
 }
 
 .fa-arrow-left {
@@ -59,10 +64,7 @@ button {
   font-weight: 500;
   line-height: normal;
   border: none;
-}
-
-button:hover {
-  display: none;
+  background: var(--Grey-2, #EAEAEA);
 }
 
 .suitable {
@@ -78,6 +80,53 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hideOverlay 6s forwards;
+}
+.overlay .loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    border-top-color: #9356DC;
+    transform: rotate(0deg);
+  }
+  33% {
+    border-top-color: #FF79DA;
+    transform: rotate(120deg);
+  }
+  66% {
+    border-top-color: #99E2D0;
+    transform: rotate(240deg);
+  }
+  100% {
+    border-top-color: #9356DC;
+    transform: rotate(360deg);
+  }
+}
+@keyframes hideOverlay {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .location {
@@ -135,7 +184,7 @@ h1 {
 
 .btn {
   border-radius: 25px;
-  background: var(--Button-Gradient, linear-gradient(193deg, #ff79da -11.44%, #9356DC 123.93%));
+  background: var(--Button-Gradient, linear-gradient(193deg, #ff79da -11.44%, #9356dc 123.93%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: var(--White, #FFF);
   text-align: center;
@@ -146,6 +195,7 @@ h1 {
   line-height: normal;
   padding: 13px 16px 13px 16px;
   border: none;
+  transition: transform 750ms;
 }
 
 .btn1 {
@@ -165,17 +215,19 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 186px;
+  transition: transform 750ms;
 }
 
 .btn:hover, .btn1:hover {
   background: var(--Button-Gradient, linear-gradient(193deg, #ff8bde -11.44%, #965cdc 123.93%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+  transform: scale(1.025);
 }
 
 .tap {
   display: flex;
   justify-content: center;
-  margin-top: 45px;
+  padding: 40px 0px;
 }
 
 li::marker {
@@ -185,7 +237,7 @@ li::marker {
 nav {
   display: flex;
   flex-direction: column;
-  margin: 48px 20px 68px 20px;
+  margin: 50px 20px 50px 20px;
 }
 nav h1 {
   text-align: left;
@@ -211,7 +263,7 @@ nav ul .a li {
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding: 28px 38px;
+  padding: 24px;
   gap: 20px;
 }
 nav ul .a li .ellipse {
@@ -232,10 +284,11 @@ nav ul .a li .ellipse {
 
 .heart {
   fill-opacity: 0;
-  transition: fill-opacity 1.5s;
+  transition: fill-opacity 3s ease-out, stroke-opacity 1.5s linear;
 }
 
 .heart:hover {
+  stroke-opacity: 0;
   fill-opacity: 1;
   cursor: pointer;
 }
@@ -261,10 +314,6 @@ nav ul .a li .ellipse {
   width: 40px;
 }
 
-.grey {
-  background-color: var(--Background, #F6F6F6);
-}
-
 .card-title {
   font-family: Roboto;
   font-size: 18px;
@@ -282,6 +331,7 @@ nav ul .a li .ellipse {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  text-overflow: ellipsis;
 }
 
 .weight {
@@ -296,6 +346,12 @@ nav ul .a li .ellipse {
 }
 .restaurants h1 {
   text-align: left;
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .new {
@@ -339,20 +395,25 @@ nav ul .a li .ellipse {
   height: 231px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .img2 {
+  max-width: 100%;
+  max-height: 32rem;
   width: 100%;
-  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
   position: relative;
-  bottom: 60px;
   background-color: #F6F6F6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 32px 17px 0px 17px;
+  margin-top: -42px;
 }
 
 .shriklando {
@@ -392,6 +453,29 @@ nav ul .a li .ellipse {
     transform: translateY(0);
   }
 }
+.card-rating1 {
+  position: absolute;
+  left: 962px;
+  bottom: -2.4px;
+  margin-right: -60px;
+  margin-left: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .foot {
   display: flex;
   padding: 22px 25px;
@@ -423,6 +507,11 @@ nav ul .a li .ellipse {
   line-height: normal;
 }
 
+.Selectbutton {
+  position: relative;
+  left: 500px;
+}
+
 .fa-utensils {
   margin-right: 11px;
 }
@@ -431,7 +520,15 @@ nav ul .a li .ellipse {
   margin-right: 9px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 945px) {
+  .hmedia {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  nav {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
   nav ul {
     flex-direction: row;
     margin-top: 25px;
@@ -455,5 +552,38 @@ nav ul .a li .ellipse {
   nav ul .a li .ellipse .foot ul {
     flex-direction: row-reverse;
     justify-content: flex-start;
+  }
+  .menu {
+    margin: 0 100px;
+    margin-top: -42px;
+  }
+  .menu .shriklando {
+    justify-content: center;
+  }
+  .menu .starter {
+    padding: 0 50px;
+  }
+  .restaurants {
+    background: var(--Background, #F6F6F6);
+    margin: 0;
+    padding: 30px 60px;
+  }
+  .media {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 60px;
+  }
+  .cardwrap {
+    flex: 1 1 45%;
+  }
+  .foot {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 30px 25px;
+  }
+  .foot ul {
+    flex-direction: row;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */

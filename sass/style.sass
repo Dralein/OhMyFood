@@ -5,19 +5,18 @@
   font-family: 'Roboto', sans-serif
 
 a
- color: inherit
- text-decoration: none
- list-style-type: none
+  color: inherit
+  text-decoration: none
+  list-style-type: none
 
-.card 
+.card
   background-color: white
-  border-radius: 15.043px
+  border-radius: 20px
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1))
   transition: transform 1000ms
 
 .card:hover
   transform: scale(1.025)
-
 
 .fa-arrow-left
   position: absolute
@@ -34,7 +33,7 @@ a
   align-items: center
   justify-content: center
 
-.main-container 
+.main-container
   margin: 0px
   min-width: 325px
 
@@ -47,9 +46,9 @@ header
   display: flex
   width: 197px
   height: 36px
-  margin: 14px auto 
+  margin: 14px auto
 
-button 
+button
   color: var(--Grey, #353535)
   font-size: 16px
   font-style: normal
@@ -58,21 +57,20 @@ button
   border: none
   background: var(--Grey-2, #EAEAEA)
 
-
 .suitable
- box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
- position: relative
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
+  position: relative
 
-.euros 
- color: #353535
- text-align: center
- font-family: Roboto
- font-size: 15.043px
- font-style: normal
- font-weight: 700
- line-height: normal
+.euros
+  color: #353535
+  text-align: center
+  font-family: Roboto
+  font-size: 15.043px
+  font-style: normal
+  font-weight: 700
+  line-height: normal
 
-.overlay 
+.overlay
   position: fixed
   width: 100%
   height: 100%
@@ -81,39 +79,38 @@ button
   justify-content: center
   align-items: center
   z-index: 9999
-  animation: hideOverlay 6s forwards
+  animation: hideOverlay 3s forwards
 
-  .loader 
+  .loader
     border: 4px solid rgba(0, 0, 0, 0.1)
     border-top: 4px solid
     border-radius: 50%
     width: 50px
     height: 50px
-    animation: spin 2s linear infinite
+    animation: spin 1.5s linear infinite
 
   @keyframes spin
     0%
-      border-top-color: #9356DC 
+      border-top-color: #9356DC
       transform: rotate(0deg)
-    33% 
+    33%
       border-top-color: #FF79DA
       transform: rotate(120deg)
-    66% 
+    66%
       border-top-color: #99E2D0
       transform: rotate(240deg)
-    100% 
-      border-top-color: #9356DC 
+    100%
+      border-top-color: #9356DC
       transform: rotate(360deg)
 
-  @keyframes hideOverlay 
-    0% 
+  @keyframes hideOverlay
+    0%
       opacity: 1
-    100% 
+    100%
       opacity: 0
       visibility: hidden
 
-
-.location 
+.location
   display: flex
   flex-direction: row
   padding: 13px 0px
@@ -199,7 +196,7 @@ h1
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4)
   transform: scale(1.025)
 
-.tap 
+.tap
   display: flex
   justify-content: center
   padding: 40px 0px
@@ -213,53 +210,51 @@ nav
   margin: 50px 20px 50px 20px
   h1
     text-align: left
-      
-nav 
+
+nav
   ul
+    display: flex
+    margin-top: 20px
+    flex-direction: column
+    align-items: flex-start
+    gap: 15px
+    align-self: stretch
+    .a
       display: flex
-      margin-top: 20px
       flex-direction: column
-      align-items: flex-start
-      gap: 15px
-      align-self: stretch
-      .a
+      gap: 25px
+      width: 100%
+      li
         display: flex
-        flex-direction: column
-        gap: 25px
-        width: 100%
-        li
-         display: flex
-         align-items: center
-         border-radius: 20px
-         background: var(--Background, #F6F6F6)
-         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15)
-         padding: 24px
-         gap: 20px
-         .ellipse
-           display: flex
-           color: var(--White, #FFF)
-           background-color: var(--Primary, #9356DC)
-           border-radius: 50%
-           width: 24px
-           height: 24px
-           align-items: center
-           justify-content: center
-           position: absolute
-           left: 8px
-           font-family: Roboto
-           font-size: 14.182px
-           font-weight: 500
+        align-items: center
+        border-radius: 20px
+        background: var(--Background, #F6F6F6)
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15)
+        padding: 24px
+        gap: 20px
+        .ellipse
+          display: flex
+          color: var(--White, #FFF)
+          background-color: var(--Primary, #9356DC)
+          border-radius: 50%
+          width: 24px
+          height: 24px
+          align-items: center
+          justify-content: center
+          position: absolute
+          left: 8px
+          font-family: Roboto
+          font-size: 14.182px
+          font-weight: 500
 
 .heart
- fill-opacity: 0
- transition: fill-opacity 3s ease-out, stroke-opacity 1.5s linear
+  fill-opacity: 0
+  transition: fill-opacity 1.5s ease-out, stroke-opacity 0.75s linear
 
 .heart:hover
   stroke-opacity: 0
   fill-opacity: 1
   cursor: pointer
-
-
 
 .starter
   margin-top: 38px
@@ -280,13 +275,12 @@ nav
   border-bottom-style: solid
   width: 40px
 
-
 .card-title
- font-family: Roboto
- font-size: 18px
- font-style: normal
- font-weight: 500
- line-height: normal
+  font-family: Roboto
+  font-size: 18px
+  font-style: normal
+  font-weight: 500
+  line-height: normal
 
 .card-subtitle
   font-family: Roboto
@@ -301,7 +295,7 @@ nav
 
 .weight
   font-weight: 500
-            
+
 .restaurants
   display: flex
   flex-direction: column
@@ -342,12 +336,11 @@ nav
   gap: 2px
   width: 100%
 
-
 .card-rating
   position: absolute
   right: 25px
   bottom: 19px
-  
+
 .img1
   width: 100%
   height: 231px
@@ -380,51 +373,26 @@ nav
   display: flex
   gap: 25px
 
-.group 
+.group
   opacity: 0
-  animation: appear 1.5s ease-in-out forwards
+  animation: itemAppear 1.5s ease-in-out forwards
 
 .group1
   opacity: 0
-  animation: appear 3s ease-in-out forwards
+  animation: itemAppear 3s ease-in-out forwards
 
 .group2
   opacity: 0
-  animation: appear 4.5s ease-in-out forwards
+  animation: itemAppear 4.5s ease-in-out forwards
 
-
-@keyframes appear 
-  0% 
+@keyframes itemAppear
+  0%
     opacity: 0
     transform: translateY(20px)
-  
-  100% 
+
+  100%
     opacity: 1
     transform: translateY(0)
-
-.card-rating1
-  position: absolute
-  left: 962px
-  bottom: -2.4px
-  margin-right: -60px
-  margin-left: 16px
-  overflow: hidden
-  cursor: pointer
-  animation: itemAppear .6s
-  animation-timing-function: cubic-bezier(.5,1.58,.34,.82)
-  animation-fill-mode: both
-  transform: scale(0)
-  max-width: 100%
-
-@keyframes itemAppear 
-  0% 
-    transform: scale(0)
-  100% 
-    transform: scale(1)
-  
-
-
-
 
 .foot
   display: flex
@@ -463,9 +431,6 @@ nav
 .fa-handshake-angle
   margin-right: 9px
 
-
-
-
 @media screen and ( min-width: 945px )
   .hmedia
     font-size: 40px
@@ -478,7 +443,7 @@ nav
       margin-top: 25px
       .a
         flex-direction: row
-        gap: 25px 
+        gap: 25px
         li
           width: 100%
           position: relative
@@ -517,33 +482,70 @@ nav
       flex-direction: row
       align-items: center
 
+.menu1
+  background-color: white
+  padding: 1rem
+  display: flex
+  border-radius: 20px
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1))
+  overflow: hidden
+  cursor: pointer
+  max-width: 100%
 
+  &__content
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    flex: 1
 
+  &__title
+    margin: 0
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
 
+  &__description
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    display: flex
+    align-items: flex-start
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  &__price
+    font-weight: bold
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    padding-left: 0.5rem
+    font-size: 15.043px
+    font-weight: 700
   
+  &__confirmation
+    background-color: #99E2D0
+    margin: -1rem -5rem -1rem 1rem
+    width: 4rem
+    display: flex
+    align-items: center
+    justify-content: center
+    transition-duration: 0.5s
 
-  
+  &:hover &__confirmation
+    margin-right: -1rem
 
 
+  &__wrapIcon
+    height: 1.6rem
+    width: 1.6rem
+    background-color: white
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 100px
+    transform: rotate(180deg)
+    transition-duration: 0.5s
 
+  &:hover &__wrapIcon
+    transform: rotate(0)
 
-
+  &__icon
+    color: #99E2D0

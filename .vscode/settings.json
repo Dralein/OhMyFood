@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "prettier.useTabs": false,
+    "prettier.bracketSameLine": true,
+    "prettier.enableDebugLogs": true
 }

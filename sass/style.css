@@ -243,11 +243,7 @@ nav h1 {
   text-align: left;
 }
 
-<<<<<<< HEAD
-nav ul {
-=======
 nav .a {
->>>>>>> 682ced7 (1.0)
   display: flex;
   margin-top: 20px;
   flex-direction: column;
@@ -255,21 +251,13 @@ nav .a {
   gap: 15px;
   align-self: stretch;
 }
-<<<<<<< HEAD
-nav ul .a {
-=======
 nav .a ul {
->>>>>>> 682ced7 (1.0)
   display: flex;
   flex-direction: column;
   gap: 25px;
   width: 100%;
 }
-<<<<<<< HEAD
-nav ul .a li {
-=======
 nav .a ul li {
->>>>>>> 682ced7 (1.0)
   display: flex;
   align-items: center;
   border-radius: 20px;
@@ -278,11 +266,7 @@ nav .a ul li {
   padding: 24px;
   gap: 20px;
 }
-<<<<<<< HEAD
-nav ul .a li .ellipse {
-=======
 nav .a ul li .ellipse {
->>>>>>> 682ced7 (1.0)
   display: flex;
   color: var(--White, #FFF);
   background-color: var(--Primary, #9356DC);
@@ -417,11 +401,7 @@ nav .a ul li .ellipse {
 
 .img2 {
   max-width: 100%;
-<<<<<<< HEAD
-  max-height: 32rem;
-=======
   max-height: 26rem;
->>>>>>> 682ced7 (1.0)
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -494,12 +474,9 @@ nav .a ul li .ellipse {
   font-weight: 400;
   line-height: normal;
 }
-<<<<<<< HEAD
-=======
 .foot ul li a:hover {
   text-decoration: underline;
 }
->>>>>>> 682ced7 (1.0)
 
 .logo2 {
   color: var(--White, #FFF);
@@ -523,76 +500,6 @@ nav .a ul li .ellipse {
   margin-right: 9px;
 }
 
-<<<<<<< HEAD
-@media screen and (min-width: 945px) {
-  .hmedia {
-    font-size: 40px;
-    font-weight: 700;
-  }
-  nav {
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-  nav ul {
-    flex-direction: row;
-    margin-top: 25px;
-  }
-  nav ul .a {
-    flex-direction: row;
-    gap: 25px;
-  }
-  nav ul .a li {
-    width: 100%;
-    position: relative;
-  }
-  nav ul .a li .ellipse {
-    position: absolute;
-    left: -10.5px;
-  }
-  nav ul .a li .ellipse .foot {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-  }
-  nav ul .a li .ellipse .foot ul {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-  }
-  .menu {
-    margin: 0 100px;
-    margin-top: -42px;
-  }
-  .menu .shriklando {
-    justify-content: center;
-  }
-  .menu .starter {
-    padding: 0 50px;
-  }
-  .restaurants {
-    background: var(--Background, #F6F6F6);
-    margin: 0;
-    padding: 30px 60px;
-  }
-  .media {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 60px;
-  }
-  .cardwrap {
-    flex: 1 1 45%;
-  }
-  .foot {
-    flex-direction: row-reverse;
-    align-items: center;
-    padding: 30px 25px;
-  }
-  .foot ul {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-=======
->>>>>>> 682ced7 (1.0)
 .menu1 {
   background-color: white;
   padding: 1rem;
@@ -619,12 +526,7 @@ nav .a ul li .ellipse {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-<<<<<<< HEAD
-  display: flex;
-  align-items: flex-start;
-=======
   text-align: left;
->>>>>>> 682ced7 (1.0)
 }
 .menu1__price {
   font-weight: bold;
@@ -663,8 +565,6 @@ nav .a ul li .ellipse {
 }
 .menu1__icon {
   color: #99E2D0;
-<<<<<<< HEAD
-=======
 }
 
 @media screen and (min-width: 945px) {
@@ -733,5 +633,4 @@ nav .a ul li .ellipse {
     flex-direction: row;
     align-items: center;
   }
->>>>>>> 682ced7 (1.0)
 }/*# sourceMappingURL=style.css.map */
